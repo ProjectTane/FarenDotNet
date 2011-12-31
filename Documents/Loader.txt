@@ -1,0 +1,5 @@
+﻿
+
+ローダーを作成したもの
+/Data/MasterData
+

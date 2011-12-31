@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3DD2ACB6-31DA-42D9-B562-B757413E767A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FarenDotNet</RootNamespace>
+    <AssemblyName>FarenDotNet</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\lib\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicData\AreaData.cs" />
+    <Compile Include="BasicData\AttackType.cs" />
+    <Compile Include="BasicData\Callable.cs" />
+    <Compile Include="BasicData\DefaultAttack.cs" />
+    <Compile Include="BasicData\FieldMap.cs" />
+    <Compile Include="BasicData\GameData.cs" />
+    <Compile Include="BasicData\Landform.cs" />
+    <Compile Include="BasicData\LandformInfo.cs" />
+    <Compile Include="BasicData\MagicData.cs" />
+    <Compile Include="BasicData\MagicDictionary.cs" />
+    <Compile Include="BasicData\MasterData.cs" />
+    <Compile Include="BasicData\MoveType.cs" />
+    <Compile Include="BasicData\ReinData.cs" />
+    <Compile Include="BasicData\Resistivity.cs" />
+    <Compile Include="BasicData\ScenarioData.cs" />
+    <Compile Include="BasicData\Skill.cs" />
+    <Compile Include="BasicData\Species.cs" />
+    <Compile Include="BasicData\UnitData.cs" />
+    <Compile Include="BasicData\UnitImageResources.cs" />
+    <Compile Include="BasicData\UnitRank.cs" />
+    <Compile Include="FileData\Area.cs" />
+    <Compile Include="FileData\AtAtLoader\Loader.cs" />
+    <Compile Include="FileData\AtAtLoader\Loader.Province.cs" />
+    <Compile Include="FileData\AtAtLoader\Loader.Scenario.cs" />
+    <Compile Include="FileData\FieldMap.cs" />
+    <Compile Include="FileData\GameData.cs" />
+    <Compile Include="FileData\Province.cs" />
+    <Compile Include="FileData\Scenario.cs" />
+    <Compile Include="FileData\Unit.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Loader\AreaDataLoader.cs" />
+    <Compile Include="Loader\DataFormatException.cs" />
+    <Compile Include="Loader\GameLoader.cs" />
+    <Compile Include="Loader\GameLoaderFactory.cs" />
+    <Compile Include="Loader\MagicDataLoader.cs" />
+    <Compile Include="Loader\MasterDataLoader.cs" />
+    <Compile Include="Loader\ReignLoader.cs" />
+    <Compile Include="Loader\ScenarioLoader.cs" />
+    <Compile Include="Loader\ScriptLexicalAnalyzer.cs" />
+    <Compile Include="Loader\ScriptLoader.cs" />
+    <Compile Include="Loader\ScriptSemanticalAnalyzer.cs" />
+    <Compile Include="Loader\ScriptSyntaxAnalyzer.cs" />
+    <Compile Include="Loader\SettingFileReader.cs" />
+    <Compile Include="Loader\SkillLoader.cs" />
+    <Compile Include="Loader\UnitDataLoader.cs" />
+    <Compile Include="Loader\UnitDataLoaderNeo.cs" />
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewGame.UI\NewGameWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewGame.UI\NewGameWindow.Designer.cs">
+      <DependentUpon>NewGameWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewGame.UI\Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewGame.UI\Page.Designer.cs">
+      <DependentUpon>Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewGame.UI\PageBinder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewGame.UI\PageBinder.Designer.cs">
+      <DependentUpon>PageBinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewGame.UI\SelectMastersPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewGame.UI\SelectMastersPage.Designer.cs">
+      <DependentUpon>SelectMastersPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewGame.UI\SelectNumberPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewGame.UI\SelectNumberPage.Designer.cs">
+      <DependentUpon>SelectNumberPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewGame.UI\SelectScenarioPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewGame.UI\SelectScenarioPage.Designer.cs">
+      <DependentUpon>SelectScenarioPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewGame\Root.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reign.UI\AreaInfoWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reign.UI\AreaInfoWindow.Designer.cs">
+      <DependentUpon>AreaInfoWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reign.UI\EmployWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reign.UI\EmployWindow.Designer.cs">
+      <DependentUpon>EmployWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reign.UI\GameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reign.UI\GameOver.Designer.cs">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reign.UI\LeagueWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reign.UI\LeagueWindow.Designer.cs">
+      <DependentUpon>LeagueWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reign.UI\MasterWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reign.UI\MasterWindow.Designer.cs">
+      <DependentUpon>MasterWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reign.UI\MoveAreaCandidateWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reign.UI\MoveAreaCandidateWindow.Designer.cs">
+      <DependentUpon>MoveAreaCandidateWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reign.UI\MoveUnitWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reign.UI\MoveUnitWindow.Designer.cs">
+      <DependentUpon>MoveUnitWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reign.UI\PrepareWarWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reign.UI\PrepareWarWindow.Designer.cs">
+      <DependentUpon>PrepareWarWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reign.UI\ProvinceInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reign.UI\ProvinceInfoControl.Designer.cs">
+      <DependentUpon>ProvinceInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reign.UI\ReignWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reign.UI\ReignWindow.Designer.cs">
+      <DependentUpon>ReignWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reign.UI\ReignWindowManager.cs" />
+    <Compile Include="Reign.UI\Scripter.cs" />
+    <Compile Include="Reign.UI\TextWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reign.UI\TextWindow.Designer.cs">
+      <DependentUpon>TextWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reign.UI\TopPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reign.UI\TopPanel.Designer.cs">
+      <DependentUpon>TopPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reign.UI\UnitImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reign.UI\WorldMapPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reign.UI\WorldMapPanel.Designer.cs">
+      <DependentUpon>WorldMapPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reign\Area.cs" />
+    <Compile Include="Reign\IUniqueUnitCollection.cs" />
+    <Compile Include="Reign\League.cs" />
+    <Compile Include="Reign\Load.cs" />
+    <Compile Include="Reign\NewGame.cs" />
+    <Compile Include="Reign\Phase.cs" />
+    <Compile Include="Reign\Province.cs" />
+    <Compile Include="Reign\ProvinceInfo.cs" />
+    <Compile Include="Reign\ReignManager.cs" />
+    <Compile Include="Reign\Save.cs" />
+    <Compile Include="Reign\Side.cs" />
+    <Compile Include="Reign\UniqueUnitCollection.cs" />
+    <Compile Include="Reign\Unit.cs" />
+    <Compile Include="Reign\WorldMap.cs" />
+    <Compile Include="War\AbnormalCondition\AttackCountChangeCondition.cs" />
+    <Compile Include="War\AbnormalCondition\ConditionSet.cs" />
+    <Compile Include="War\AbnormalCondition\IAbnormalCondition.cs" />
+    <Compile Include="War\AbnormalCondition\MoveTypeChangeCondition.cs" />
+    <Compile Include="War\AbnormalCondition\ParalysisCondition.cs" />
+    <Compile Include="War\AbnormalCondition\PetrifactionCondition.cs" />
+    <Compile Include="War\AbnormalCondition\PhantasmCondition.cs" />
+    <Compile Include="War\AbnormalCondition\PoisonCondition.cs" />
+    <Compile Include="War\AbnormalCondition\ResistivityChangeCondition.cs" />
+    <Compile Include="War\AbnormalCondition\SleepCondition.cs" />
+    <Compile Include="War\AbnormalCondition\StatusChangeCondition.cs" />
+    <Compile Include="War\AbnormalCondition\SummoningCondition.cs" />
+    <Compile Include="War\AI\AI.cs" />
+    <Compile Include="War\AutoDeployPhaseCreator.cs" />
+    <Compile Include="War\BattleAction\ActionArguments.cs" />
+    <Compile Include="War\BattleAction\AdditionalEffect.cs" />
+    <Compile Include="War\BattleAction\BattleActionUtil.cs" />
+    <Compile Include="War\BattleAction\ChipTargetAction.cs" />
+    <Compile Include="War\BattleAction\ClearBadConditonAction.cs" />
+    <Compile Include="War\BattleAction\Consumption.cs" />
+    <Compile Include="War\BattleAction\DelugeAction.cs" />
+    <Compile Include="War\BattleAction\GiveAbnormalConditionAction.cs" />
+    <Compile Include="War\BattleAction\IBattleAction.cs" />
+    <Compile Include="War\BattleAction\MagicAction.cs" />
+    <Compile Include="War\BattleAction\MoveAction.cs" />
+    <Compile Include="War\BattleAction\NormalAttackAction.cs" />
+    <Compile Include="War\BattleAction\RequiemAction.cs" />
+    <Compile Include="War\BattleAction\ScreenEffect\ArrowAnimation.cs" />
+    <Compile Include="War\BattleAction\ScreenEffect\ChipFrameAnimation.cs" />
+    <Compile Include="War\BattleAction\ScreenEffect\IScreenEffect.cs" />
+    <Compile Include="War\BattleAction\ScreenEffect\ScreenFrameAnimation.cs" />
+    <Compile Include="War\BattleAction\SkillAction.cs" />
+    <Compile Include="War\BattleAction\SummonAction.cs" />
+    <Compile Include="War\BattleAction\VolcanoAction.cs" />
+    <Compile Include="War\BattleAction\WallCrashAction.cs" />
+    <Compile Include="War\BattleCommand\DisableCommand.cs" />
+    <Compile Include="War\BattleCommand\FinishActionCommand.cs" />
+    <Compile Include="War\BattleCommand\IBattleCommand.cs" />
+    <Compile Include="War\BattleCommand\ShowWindowCommand.cs" />
+    <Compile Include="War\BattleCommand\SingleActionCommand.cs" />
+    <Compile Include="War\Construct.cs" />
+    <Compile Include="War\Land.cs" />
+    <Compile Include="War\LandformCollection.cs" />
+    <Compile Include="War\Loader\LandformLoader.cs" />
+    <Compile Include="War\Loader\SkillCommandLoader.cs" />
+    <Compile Include="War\Loader\WarMagicDataLoader.cs" />
+    <Compile Include="War\Loader\WarMapLoader.cs" />
+    <Compile Include="War\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="War\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="War\MoveCalculator.cs" />
+    <Compile Include="War\PhaseCreator.cs" />
+    <Compile Include="War\Phase\BattlePhase.cs" />
+    <Compile Include="War\Phase\DeployUnitPhase.cs" />
+    <Compile Include="War\Phase\InitiativePhase.cs" />
+    <Compile Include="War\Phase\IPhase.cs" />
+    <Compile Include="War\Phase\PhaseManager.cs" />
+    <Compile Include="War\Phase\Phases.cs" />
+    <Compile Include="War\Phase\TurnPhase.cs" />
+    <Compile Include="War\Program.cs" />
+    <Compile Include="War\Scope\AbstractScope.cs" />
+    <Compile Include="War\Scope\DefaultScope.cs" />
+    <Compile Include="War\Scope\IScope.cs" />
+    <Compile Include="War\Scope\ScopeUtil.cs" />
+    <Compile Include="War\Scope\StraightScope.cs" />
+    <Compile Include="War\Scope\WholeScope.cs" />
+    <Compile Include="War\Situation.cs" />
+    <Compile Include="War\TargetType.cs" />
+    <Compile Include="War\TurnManager.cs" />
+    <Compile Include="War\UI\CommandWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="War\UI\CommandWindow.Designer.cs">
+      <DependentUpon>CommandWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="War\UI\DeploymentWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="War\UI\DeploymentWindow.Designer.cs">
+      <DependentUpon>DeploymentWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="War\UI\DockingWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="War\UI\ElementSelectWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="War\UI\ElementSelectWindow.Designer.cs">
+      <DependentUpon>ElementSelectWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="War\UI\IWindowForShowWindowCommand.cs" />
+    <Compile Include="War\UI\MagicSelectWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="War\UI\MagicSelectWindow.Designer.cs">
+      <DependentUpon>MagicSelectWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="War\UI\MapChipInfoWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="War\UI\MapChipInfoWindow.Designer.cs">
+      <DependentUpon>MapChipInfoWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="War\UI\MapWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="War\UI\MapWindow.Designer.cs">
+      <DependentUpon>MapWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="War\UI\MiniUnitInfoWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="War\UI\MiniUnitInfoWindow.Designer.cs">
+      <DependentUpon>MiniUnitInfoWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="War\UI\PrintableScope.cs" />
+    <Compile Include="War\UI\UnitInfoWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="War\UI\UnitInfoWindow.Designer.cs">
+      <DependentUpon>UnitInfoWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="War\UI\WarMagicData.cs" />
+    <Compile Include="War\UI\WarPresentationModel.cs" />
+    <Compile Include="War\WarGlobal.cs" />
+    <Compile Include="War\WarInitializer.cs" />
+    <Compile Include="War\WarMap.cs" />
+    <Compile Include="War\WarSide.cs" />
+    <Compile Include="War\WarSkill.cs" />
+    <Compile Include="War\WarUnit.cs" />
+    <Compile Include="War\WarUnitBuilder.cs" />
+    <Compile Include="War\WarUnitCollection.cs" />
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewGame.UI\NewGameWindow.resx">
+      <DependentUpon>NewGameWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewGame.UI\Page.resx">
+      <DependentUpon>Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewGame.UI\PageBinder.resx">
+      <DependentUpon>PageBinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewGame.UI\SelectMastersPage.resx">
+      <DependentUpon>SelectMastersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewGame.UI\SelectNumberPage.resx">
+      <DependentUpon>SelectNumberPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewGame.UI\SelectScenarioPage.resx">
+      <DependentUpon>SelectScenarioPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reign.UI\AreaInfoWindow.resx">
+      <DependentUpon>AreaInfoWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reign.UI\EmployWindow.resx">
+      <DependentUpon>EmployWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reign.UI\GameOver.resx">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reign.UI\LeagueWindow.resx">
+      <DependentUpon>LeagueWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reign.UI\MasterWindow.resx">
+      <DependentUpon>MasterWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reign.UI\MoveAreaCandidateWindow.resx">
+      <DependentUpon>MoveAreaCandidateWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reign.UI\MoveUnitWindow.resx">
+      <DependentUpon>MoveUnitWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reign.UI\PrepareWarWindow.resx">
+      <DependentUpon>PrepareWarWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reign.UI\ProvinceInfoControl.resx">
+      <DependentUpon>ProvinceInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reign.UI\ReignWindow.resx">
+      <DependentUpon>ReignWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reign.UI\TextWindow.resx">
+      <DependentUpon>TextWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reign.UI\TopPanel.resx">
+      <DependentUpon>TopPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reign.UI\WorldMapPanel.resx">
+      <DependentUpon>WorldMapPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="War\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="War\UI\CommandWindow.resx">
+      <DependentUpon>CommandWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="War\UI\DeploymentWindow.resx">
+      <DependentUpon>DeploymentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="War\UI\ElementSelectWindow.resx">
+      <DependentUpon>ElementSelectWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="War\UI\MagicSelectWindow.resx">
+      <DependentUpon>MagicSelectWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="War\UI\MapChipInfoWindow.resx">
+      <DependentUpon>MapChipInfoWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="War\UI\MapWindow.resx">
+      <DependentUpon>MapWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="War\UI\MiniUnitInfoWindow.resx">
+      <DependentUpon>MiniUnitInfoWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="War\UI\UnitInfoWindow.resx">
+      <DependentUpon>UnitInfoWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Paraiba\Paraiba\Paraiba.csproj">
+      <Project>{F0F69425-C0CC-4BA3-A186-2348B64CFDB7}</Project>
+      <Name>Paraiba</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
