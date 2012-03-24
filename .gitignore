@@ -33,3 +33,6 @@ output
 download
 *.docstates
 *.dotCover
+nuspec
+/Experiments/AntlrSurvey/lib
+packages

@@ -93,7 +93,7 @@ namespace FarenDotNet.War.UI
 			SuspendLayout();
 
 			// マップパネルの生成
-			_mapPanel = new DrawableControl(true) {
+			_mapPanel = new DrawableControl {
 				Size = new Size(WarMap.Width * _chipPixelSize.Width - _chipPixelSize.Width / 2,
 					WarMap.Height * _chipPixelSize.Height),
 			};

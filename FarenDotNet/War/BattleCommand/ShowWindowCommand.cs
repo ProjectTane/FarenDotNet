@@ -4,6 +4,7 @@ using Paraiba.Drawing.Surfaces;
 using Paraiba.Utility;
 using FarenDotNet.War.BattleAction;
 using FarenDotNet.War.UI;
+using Paraiba.Wrap;
 
 namespace FarenDotNet.War.BattleCommand
 {
